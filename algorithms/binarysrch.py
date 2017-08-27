@@ -6,14 +6,26 @@ key=input("Enter the number you want to search: ")
 
 n=len(a)
 
-def Bnysch(a,n):
-	if key==a[n/2]:
-		print ("key present at location "+str((n/2)+1) )
+def Bnysch(a,l,r,key):
+	if r >= l:
+		mid = l+ (r-l)/2
 
-	elif key<a[n/2]:
-		Bnysch(a,n/2)
+		if key==a[mid]:
+			return mid
 
-	else:
-		Bnysch(n/2+1,n)
+		elif key<a[mid]:
+			return Bnysch(a,l,mid-1,key)
 
-Bnysch(a,n)
+		else :
+			return Bnysch(a,mid+1,r,key)
+
+	else :
+		return -1
+
+result=Bnysch(a,0,n-1,key)
+
+if result != -1: 
+	print("your key is present at "+ str(result))
+
+else:
+	print("key is not present")
