@@ -28,4 +28,4 @@ if result != -1:
 	print("your key is present at "+ str(result))
 
 else:
-	print("key is not present")
+	print("key nary search is not present")
