@@ -1,0 +1,3 @@
+import epicthing
+
+epicthing.wow()
