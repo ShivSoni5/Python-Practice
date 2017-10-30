@@ -1,20 +1,23 @@
-#!/usr/bin/python
+#!/usr/bin/python3.5
 
+#run with python3.x
 
 class calculator:
 
-	def add(a,b):
-		print (a+b)
+	def addition(a,b):
+		print (a + b)
 
 	def sub(a,b):
-		return(a-b)
+		print(a-b)
 
 	def mul(a,b):
-		return(a*b)
+		print(a*b)
 	
 	def div(a,b):
-		return(a/b)
-"""
-if __name__=='__main__':
-	print("hi")
-"""
+		print(a/b)
+
+calculator.addition(2,6)
+calculator.sub(2,6)
+calculator.mul(2,6)
+calculator.div(2,6)
+
