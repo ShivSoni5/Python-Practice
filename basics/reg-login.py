@@ -1,6 +1,6 @@
 #!/usr/bin/python2
 
-import time
+from time import ctime
 import commands as cmd
 
 print """
@@ -64,7 +64,7 @@ def pwd(e,z):
 		s=cmd.getoutput("awk -F : '{print $2}' logs | grep "+q+"")
 		if s==q:
 			print "successfully logged in!!"
-		        t=time.ctime()
+		        t=ctime()
 			f=open("login","w")
 		        f.write(""+e+" login at "+t+"\n")
 		        f.close()
