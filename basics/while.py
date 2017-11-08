@@ -3,7 +3,7 @@
 i=0
 
 while i<3:
-	a=raw_input("emter password:")
+	a=raw_input("enter password:")
 	if a=="redhat":
 		print "welcome"
 		break

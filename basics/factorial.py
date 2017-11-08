@@ -6,7 +6,7 @@ product=1
 
 if num<0:
 	print"Well, n! is for integer n < 0 not defined. Sorry!"
-elif num ==0:
+elif num == 0:
 	print("0!=1")
 else:
 	while num!=1:
