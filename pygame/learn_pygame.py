@@ -38,5 +38,6 @@ while running:
 	#if you try to quit , let's finish this loop
 		if event.type == pygame.QUIT:
 			running = False
-
+	
+	pygame.display.set_caption("Demo")
 	pygame.display.flip() #this is how we update the screen we've been drawing on
