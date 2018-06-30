@@ -1,28 +1,31 @@
 #!/usr/bin/python3
 
-from flask import Flask
+from flask import Flask, render_template, request
 from subprocess import getoutput as run
 
 app = Flask(__name__)
 
+"""
 page =  '''
         <h1> Hello World!</h1>
         <h1> WebDev with Flask </h1>
         '''
+"""
 
-@app.route('/test')
+@app.route('/', methods=['GET','POST'])
 def first_page():
-    return page
+    if request.method == 'GET':
+        return render_template('main.html')
+    else:
+        return 'POST method is not allowed babe\n' # curl -X POST http://0.0.0.0:80
+#    return page
 
-@app.route('/')
-def link():
-    return '<h1><a href="www.google.com">google</a></h1>'  # will search www.google.com inside '/'
 
 # @app.route('/cmd')
 @app.route('/cmd', methods = ['GET','POST'])
 def command():
     date = run('date')
-    return (f'<h1> {date} </h1>')
+    return (f'<h1> {date} </h1>\n')
 
 if __name__ == '__main__':
 #    app.run()
