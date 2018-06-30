@@ -13,6 +13,10 @@ page =  '''
 def first_page():
     return page
 
+@app.route('/')
+def link():
+    return '<h1><a href="www.google.com">google</a></h1>'  # will search www.google.com inside '/'
+
 if __name__ == '__main__':
 #    app.run()
 #    app.run('192.168.1.7')
