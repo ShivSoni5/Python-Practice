@@ -22,10 +22,10 @@ def first_page():
 
 
 # @app.route('/cmd')
-@app.route('/cmd', methods = ['GET','POST'])
-def command():
-    date = run('date')
-    return (f'<h1> {date} </h1>\n')
+@app.route('/cmd/<x>', methods = ['GET','POST'])
+def command(x):
+    output = run(x)
+    return (f'<h1> {output} </h1>\n')
 
 if __name__ == '__main__':
 #    app.run()
