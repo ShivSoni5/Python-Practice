@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 from flask import Flask
+from subprocess import getoutput as run
 
 app = Flask(__name__)
 
@@ -16,6 +17,12 @@ def first_page():
 @app.route('/')
 def link():
     return '<h1><a href="www.google.com">google</a></h1>'  # will search www.google.com inside '/'
+
+# @app.route('/cmd')
+@app.route('/cmd', methods = ['GET','POST'])
+def command():
+    date = run('date')
+    return (f'<h1> {date} </h1>')
 
 if __name__ == '__main__':
 #    app.run()
