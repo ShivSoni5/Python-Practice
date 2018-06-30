@@ -3,7 +3,7 @@
 import imaplib,email
 
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
-mail.login('your_email','your_password')
+mail.login('fakeshivsonic05@gmail.com','myfakeid05')
 
 mail.select('inbox')
 
