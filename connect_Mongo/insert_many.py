@@ -16,11 +16,16 @@ post_2 = {
     'content': 'Use virtual environments, you guys',
     'author': 'William'
 }
+post_4 = {
+    'title': 'Virtual Environments',
+    'content': 'Use virtual environments, you guys',
+    'author': 'William'
+}
 post_3 = {
     'title': 'Learning Python',
     'content': 'Learn Python, it is easy',
     'author': 'Bill'
 }
 
-result = posts.insert_many([post_1,post_2,post_3])
+result = posts.insert_many([post_1,post_2,post_3,post_4])
 print(f'Mulitple Posts: {result.inserted_ids}')
