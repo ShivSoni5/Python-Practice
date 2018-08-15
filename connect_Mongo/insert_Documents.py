@@ -11,7 +11,7 @@ db = client.pymongo_new
 # db = client['pymongo_test']  # Same as above
 
 # Inserting Documents
-
+'''
 posts = db.posts
 post_data = {
         'title': 'What is Python?',
@@ -19,4 +19,11 @@ post_data = {
         'author': 'None'
         }
 result = posts.insert_one(post_data)
+'''
+
+name = db.names
+n = {'name':'shiv',
+        'gender':'boy'}
+
+result = name.insert_one(n)
 print(f'One post: {result.inserted_id}')
